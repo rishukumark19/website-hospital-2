@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View } from '../types';
 import { 
@@ -24,9 +23,9 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
       <section className="bg-primary text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">About NeuroDiag</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Pioneering diagnostic excellence with cutting-edge technology and a patient-first approach since 1998.
+          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">About Avishkar Diagnostic</h1>
+          <p className="text-xl text-green-50 max-w-2xl mx-auto leading-relaxed">
+            Pioneering diagnostic excellence in Dhanbad with cutting-edge technology and a patient-first approach.
           </p>
         </div>
       </section>
@@ -36,7 +35,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-               <div className="inline-block px-3 py-1 bg-teal-light text-teal rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+               <div className="inline-block px-3 py-1 bg-green-100 text-primary rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                  Our Story
                </div>
                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -45,7 +44,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                </h2>
                <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                  <p>
-                   Founded with a vision to make world-class diagnostics accessible to everyone, NeuroDiag Centre has grown from a single lab to a network of advanced diagnostic centres. 
+                   Founded with a vision to make world-class diagnostics accessible to everyone in Jharkhand, Avishkar Diagnostic Centre has grown to become the most trusted name in Bank More, Dhanbad.
                  </p>
                  <p>
                    We believe that accurate diagnosis is the first step towards a cure. That's why we invest heavily in the latest technology and follow stringent quality control measures to ensure that every report we generate is 100% reliable.
@@ -53,15 +52,15 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                </div>
                
                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                 <div className="bg-green-50 p-6 rounded-xl border border-green-100">
                     <Target className="h-8 w-8 text-secondary mb-3" />
                     <h3 className="font-bold text-primary text-lg mb-2">Our Mission</h3>
                     <p className="text-sm text-gray-600">To provide accurate, timely, and affordable diagnostic services to all segments of society.</p>
                  </div>
-                 <div className="bg-teal-light/30 p-6 rounded-xl border border-teal-light">
-                    <Globe className="h-8 w-8 text-teal mb-3" />
+                 <div className="bg-green-50/50 p-6 rounded-xl border border-green-100">
+                    <Globe className="h-8 w-8 text-primary mb-3" />
                     <h3 className="font-bold text-primary text-lg mb-2">Our Vision</h3>
-                    <p className="text-sm text-gray-600">To be the most trusted global leader in diagnostic healthcare and research.</p>
+                    <p className="text-sm text-gray-600">To be the most trusted leader in diagnostic healthcare and research in the region.</p>
                  </div>
                </div>
             </div>
@@ -69,13 +68,13 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
             <div className="relative">
               <div className="absolute inset-0 bg-secondary/10 rounded-3xl transform rotate-3"></div>
               <img 
-                src="https://images.unsplash.com/photo-1581056771107-24ca5f0438de?auto=format&fit=crop&q=80&w=2068" 
-                alt="Lab Equipment" 
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=2000" 
+                alt="Avishkar Diagnostic Lab Equipment" 
                 className="relative rounded-3xl shadow-xl w-full object-cover h-[600px]"
               />
               <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl max-w-xs hidden lg:block">
-                 <p className="text-4xl font-bold text-primary mb-2">25+</p>
-                 <p className="text-gray-500 font-medium">Years of Excellence in Healthcare Diagnostics</p>
+                 <p className="text-4xl font-bold text-primary mb-2">15+</p>
+                 <p className="text-gray-500 font-medium">Years of Excellence in Dhanbad Healthcare</p>
               </div>
             </div>
           </div>
@@ -88,7 +87,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
              <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                 <img 
                     src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=2070" 
-                    alt="Professional Indian Female Doctor in a modern clinic" 
+                    alt="Professional Indian Female Doctor in Avishkar clinic" 
                     className="w-full h-96 object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end justify-center pb-10">
@@ -114,7 +113,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* NABL */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-1 transition-transform">
-               <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+               <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                  <Award className="h-8 w-8" />
                </div>
                <h3 className="text-xl font-bold text-primary mb-3">NABL Accredited</h3>
@@ -128,7 +127,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
 
             {/* CAP */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-1 transition-transform">
-               <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+               <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                  <ShieldCheck className="h-8 w-8" />
                </div>
                <h3 className="text-xl font-bold text-primary mb-3">CAP Certified</h3>
@@ -142,7 +141,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
 
             {/* ISO */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-1 transition-transform">
-               <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+               <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                  <Microscope className="h-8 w-8" />
                </div>
                <h3 className="text-xl font-bold text-primary mb-3">ISO 9001:2015</h3>
@@ -187,7 +186,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                     </div>
                   </div>
                   <h3 className="text-lg font-bold text-primary">{doc.name}</h3>
-                  <p className="text-teal font-medium text-sm">{doc.role}</p>
+                  <p className="text-secondary font-medium text-sm">{doc.role}</p>
                 </div>
               ))}
            </div>
@@ -195,16 +194,16 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
       </section>
 
       {/* 5. Patient Stories (NEW) */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-green-50">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary text-center mb-12">Trusted by 10 Million+ Patients</h2>
+            <h2 className="text-3xl font-bold text-primary text-center mb-12">Trusted by 10 Lakh+ Patients</h2>
             <div className="flex flex-wrap justify-center gap-8">
                 {[
                     { name: 'Priya Sharma', text: 'Excellent service and timely reports. The home collection was very convenient.', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100' },
                     { name: 'Amit Patel', text: 'Professional staff and clean environment. Highly recommended for full body checkups.', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100' },
-                    { name: 'Sneha Gupta', text: 'NeuroBot helped me understand my test prep easily. Great technology!', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100' }
+                    { name: 'Sneha Gupta', text: 'AvishkarBot helped me understand my test prep easily. Great technology!', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100' }
                 ].map((testimonial, idx) => (
-                    <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 max-w-sm flex items-start gap-4">
+                    <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-green-100 max-w-sm flex items-start gap-4">
                          <img src={testimonial.img} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md" />
                          <div>
                              <Quote className="h-4 w-4 text-secondary mb-1 opacity-50" />
@@ -222,20 +221,20 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
               <div>
-                 <div className="text-4xl md:text-5xl font-bold mb-2">10M+</div>
-                 <div className="text-blue-200 text-sm uppercase tracking-wide">Reports Delivered</div>
+                 <div className="text-4xl md:text-5xl font-bold mb-2">10L+</div>
+                 <div className="text-green-200 text-sm uppercase tracking-wide">Reports Delivered</div>
               </div>
               <div>
-                 <div className="text-4xl md:text-5xl font-bold mb-2">250+</div>
-                 <div className="text-blue-200 text-sm uppercase tracking-wide">Network Labs</div>
+                 <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
+                 <div className="text-green-200 text-sm uppercase tracking-wide">Years Experience</div>
               </div>
               <div>
                  <div className="text-4xl md:text-5xl font-bold mb-2">4000+</div>
-                 <div className="text-blue-200 text-sm uppercase tracking-wide">Tests Menu</div>
+                 <div className="text-green-200 text-sm uppercase tracking-wide">Tests Menu</div>
               </div>
               <div>
                  <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>
-                 <div className="text-blue-200 text-sm uppercase tracking-wide">Support</div>
+                 <div className="text-green-200 text-sm uppercase tracking-wide">Support</div>
               </div>
            </div>
         </div>

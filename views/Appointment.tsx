@@ -21,7 +21,7 @@ const Appointment: React.FC = () => {
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Booking Confirmed!</h2>
           <p className="text-gray-500 mb-8">
-            Thank you for choosing NeuroDiag. We have sent a confirmation email with your appointment details.
+            Thank you for choosing Avishkar Diagnostic. We have sent a confirmation email with your appointment details.
           </p>
           <button 
             onClick={() => setSubmitted(false)}
@@ -45,20 +45,20 @@ const Appointment: React.FC = () => {
                <h2 className="text-2xl font-bold mb-6">Contact Info</h2>
                <div className="space-y-6">
                   <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-wide mb-1">Address</p>
-                    <p>123 Medical Plaza, Suite 100<br/>New York, NY 10010</p>
+                    <p className="text-green-200 text-sm font-medium uppercase tracking-wide mb-1">Address</p>
+                    <p>Bank More, Dhanbad,<br/>Jharkhand 826001</p>
                   </div>
                   <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-wide mb-1">Phone</p>
-                    <p className="text-lg font-semibold">+1 (555) 123-4567</p>
+                    <p className="text-green-200 text-sm font-medium uppercase tracking-wide mb-1">Phone</p>
+                    <p className="text-lg font-semibold">+91 326 230 XXXX</p>
                   </div>
                   <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-wide mb-1">Email</p>
-                    <p>appointments@neurodiag.com</p>
+                    <p className="text-green-200 text-sm font-medium uppercase tracking-wide mb-1">Email</p>
+                    <p>appointments@avishkardiagnostic.com</p>
                   </div>
                   
                   <div className="border-t border-white/20 pt-6 mt-6">
-                    <p className="text-sm text-blue-100 italic">
+                    <p className="text-sm text-green-100 italic">
                       "Dedicated to providing precise diagnostics for your peace of mind."
                     </p>
                   </div>
@@ -136,7 +136,7 @@ const Appointment: React.FC = () => {
                    </div>
                 </div>
 
-                <button type="submit" className="w-full bg-secondary hover:bg-cyan-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-cyan-500/30 transition-all transform hover:scale-[1.01]">
+                <button type="submit" className="w-full bg-secondary hover:bg-red-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.01]">
                   Confirm Appointment
                 </button>
 

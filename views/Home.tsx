@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { View } from '../types';
 import { popularPackages, quickActions } from '../data/mockData';
@@ -55,11 +54,11 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       />
 
       {/* 1. Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-50 via-white to-blue-50 pt-12 pb-32 md:pt-24 md:pb-48 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-green-50 via-white to-green-50 pt-12 pb-32 md:pt-24 md:pb-48 overflow-hidden">
         
         {/* Medical Pattern Background */}
         <div className="absolute inset-0 z-0 opacity-40" style={{
-            backgroundImage: 'radial-gradient(#cbd5e1 1.5px, transparent 1.5px)',
+            backgroundImage: 'radial-gradient(#86efac 1.5px, transparent 1.5px)',
             backgroundSize: '24px 24px'
         }}></div>
 
@@ -68,23 +67,23 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left pt-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-blue-100 text-primary font-bold text-xs rounded-full mb-6 tracking-wide shadow-sm animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-green-200 text-primary font-bold text-xs rounded-full mb-6 tracking-wide shadow-sm animate-fade-in">
                 <ShieldCheck className="h-4 w-4 text-secondary" />
-                <span>NABL Accredited & ISO Certified Labs</span>
+                <span>NABL Accredited & ISO Certified Lab in Dhanbad</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-[1.1] mb-6 tracking-tight">
-                Precision Diagnostics <br className="hidden lg:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-teal">You Can Trust</span>
+                Avishkar Diagnostic <br className="hidden lg:block"/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-green-600">A Step Towards Life</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
-                Advanced pathology and radiology services delivered with care. 
+                Advanced pathology and radiology services delivered with care at Bank More, Dhanbad. 
                 Experience faster turnaround times and 100% accurate reports from our world-class facilities.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <button 
                   onClick={() => setIsBookingModalOpen(true)}
-                  className="w-full sm:w-auto bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/20 flex items-center justify-center gap-3 hover:-translate-y-1"
+                  className="w-full sm:w-auto bg-primary hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-green-900/20 flex items-center justify-center gap-3 hover:-translate-y-1"
                   aria-label="Book a home visit for sample collection"
                 >
                   <HomeIcon className="h-5 w-5" /> Book Home Visit
@@ -94,35 +93,35 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   className="w-full sm:w-auto bg-white hover:bg-gray-50 text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 hover:border-primary/30"
                   aria-label="Find the nearest lab location"
                 >
-                  <MapPin className="h-5 w-5 text-secondary" /> Find Nearest Lab
+                  <MapPin className="h-5 w-5 text-secondary" /> Find Our Lab
                 </button>
               </div>
 
               {/* Trust Indicators */}
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-8 text-sm font-semibold text-gray-500">
                 <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div> 250+ Labs
+                    <div className="w-2 h-2 rounded-full bg-secondary"></div> Bank More, Dhanbad
                 </div>
                 <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div> 24/7 Support
+                    <div className="w-2 h-2 rounded-full bg-secondary"></div> 24/7 Support
                 </div>
                 <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div> Smart Reports
+                    <div className="w-2 h-2 rounded-full bg-secondary"></div> Smart Reports
                 </div>
               </div>
             </div>
 
-            {/* Right Image Layer */}
+            {/* Right Image Layer - Avishkar Style */}
             <div className="flex-1 relative w-full max-w-lg lg:max-w-none mt-10 lg:mt-0">
               
               {/* Abstract Blob */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-100 to-teal-light rounded-full blur-3xl opacity-60"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-green-100 to-teal-light rounded-full blur-3xl opacity-60"></div>
               
-              {/* Main Image - Modern Lab */}
+              {/* Main Image - Busy Modern Reception */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
                 <img 
-                  src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=2070" 
-                  alt="Scientist using microscope in modern laboratory" 
+                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000" 
+                  alt="Avishkar Diagnostic Centre Reception Bank More Dhanbad" 
                   className="w-full h-auto object-cover"
                 />
                 
@@ -132,23 +131,23 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
               {/* Floating Card 1 - Technology */}
               <div className="absolute -left-6 top-20 bg-white p-4 rounded-xl shadow-xl border border-gray-50 flex items-center gap-3 animate-bounce-slow hidden sm:flex max-w-[200px]">
-                <div className="bg-blue-100 p-2.5 rounded-lg text-primary">
+                <div className="bg-green-100 p-2.5 rounded-lg text-primary">
                   <Microscope className="h-6 w-6" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 font-bold uppercase">Technology</p>
-                  <p className="text-primary font-bold text-sm leading-tight">AI-Powered Analysis</p>
+                  <p className="text-primary font-bold text-sm leading-tight">Advanced Lab</p>
                 </div>
               </div>
 
               {/* Floating Card 2 - Accreditation */}
               <div className="absolute -right-4 bottom-10 bg-white p-4 rounded-xl shadow-xl border border-gray-50 flex items-center gap-3 animate-bounce-delayed hidden sm:flex">
-                <div className="bg-green-100 p-2.5 rounded-lg text-green-600">
+                <div className="bg-red-100 p-2.5 rounded-lg text-secondary">
                   <Award className="h-6 w-6" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 font-bold uppercase">Quality</p>
-                  <p className="text-primary font-bold text-sm leading-tight">ISO 15189 Certified</p>
+                  <p className="text-primary font-bold text-sm leading-tight">ISO Certified</p>
                 </div>
               </div>
             </div>
@@ -167,12 +166,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <div 
                   key={index} 
                   onClick={() => handleQuickAction(action.link)}
-                  className="group flex items-center gap-4 p-4 cursor-pointer hover:bg-gray-50 rounded-xl transition-colors"
+                  className="group flex items-center gap-4 p-4 cursor-pointer hover:bg-green-50 rounded-xl transition-colors"
                   role="button"
                   tabIndex={0}
                   aria-label={action.title}
                 >
-                  <div className="w-14 h-14 bg-blue-50 group-hover:bg-primary group-hover:text-white text-primary rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0">
+                  <div className="w-14 h-14 bg-green-50 group-hover:bg-primary group-hover:text-white text-primary rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0">
                     <Icon className="h-7 w-7" />
                   </div>
                   <div>
@@ -198,7 +197,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 id="packages-heading" className="text-3xl md:text-4xl font-bold text-primary mb-4">Best Selling Packages</h2>
             <p className="text-gray-600 text-lg">
-              Comprehensive health checkups tailored for every age and lifestyle. Choose the package that suits you best.
+              Comprehensive health checkups tailored for every age and lifestyle in Dhanbad.
             </p>
           </div>
           
@@ -224,7 +223,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       {/* 4. Why Choose Us (Stats) - IMPROVED WITH DOCTOR IMAGE */}
-      <section className="py-20 bg-blue-50 relative overflow-hidden">
+      <section className="py-20 bg-green-50 relative overflow-hidden">
         {/* Background Decoration */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -235,10 +234,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             {/* Text Content */}
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Why Choose <span className="text-secondary">NeuroDiag?</span>
+                Why Choose <span className="text-secondary">Avishkar?</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                We combine technological excellence with a human touch. Our rigorous quality control ensures that every report is accurate, giving you the clarity you need for your health journey.
+                We combine technological excellence with a human touch right here in Dhanbad. Our rigorous quality control ensures that every report is accurate, giving you the clarity you need for your health journey.
               </p>
               
               <ul className="space-y-5 mb-10">
@@ -249,7 +248,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     "Affordable & Transparent Pricing"
                 ].map((item, idx) => (
                     <li key={idx} className="flex items-center gap-4 group">
-                        <div className="w-8 h-8 rounded-full bg-white border border-green-100 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-full bg-white border border-green-200 flex items-center justify-center text-secondary flex-shrink-0 shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
                             <CheckCircle2 className="h-4 w-4" />
                         </div>
                         <span className="text-gray-700 font-medium group-hover:text-primary transition-colors">{item}</span>
@@ -259,7 +258,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
               <button 
                 onClick={() => onNavigate(View.SERVICES)}
-                className="bg-primary hover:bg-blue-800 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-blue-900/10 hover:shadow-blue-900/20"
+                className="bg-primary hover:bg-green-700 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-green-900/10 hover:shadow-green-900/20"
               >
                 Learn More About Us
               </button>
@@ -268,11 +267,11 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             {/* Doctor Image & Stats - Right Side */}
             <div className="order-1 lg:order-2 relative">
                 
-                {/* Main Image Container */}
+                {/* Main Image Container - Indian Doctor */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-w-md mx-auto bg-gray-200">
                     <img 
-                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=1000" 
-                        alt="Professional Indian Doctor with stethoscope smiling confidently" 
+                        src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000" 
+                        alt="Dr. Rajesh Kumar at Avishkar Diagnostic Dhanbad" 
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
@@ -280,7 +279,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     {/* Bottom Text in Image */}
                     <div className="absolute bottom-6 left-6 right-6 text-white">
                         <p className="font-bold text-lg">Dr. Rajesh Kumar</p>
-                        <p className="text-sm opacity-90">Senior Pathologist, NeuroDiag</p>
+                        <p className="text-sm opacity-90">Senior Pathologist, Avishkar Diagnostic</p>
                     </div>
                 </div>
 
@@ -288,15 +287,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <div className="absolute top-10 -left-4 md:-left-12 bg-white p-4 rounded-xl shadow-lg border-l-4 border-secondary max-w-[160px] animate-bounce-slow">
                     <div className="flex items-center gap-3 mb-1">
                         <Users className="h-5 w-5 text-secondary" />
-                        <span className="font-bold text-2xl text-primary">10M+</span>
+                        <span className="font-bold text-2xl text-primary">10L+</span>
                     </div>
                     <p className="text-xs text-gray-500 font-semibold uppercase">Happy Patients</p>
                 </div>
 
                 {/* Floating Stat 2 - Bottom Right */}
-                <div className="absolute bottom-20 -right-4 md:-right-8 bg-white p-4 rounded-xl shadow-lg border-l-4 border-teal max-w-[180px] animate-bounce-delayed">
+                <div className="absolute bottom-20 -right-4 md:-right-8 bg-white p-4 rounded-xl shadow-lg border-l-4 border-primary max-w-[180px] animate-bounce-delayed">
                     <div className="flex items-center gap-3 mb-1">
-                        <Activity className="h-5 w-5 text-teal" />
+                        <Activity className="h-5 w-5 text-primary" />
                         <span className="font-bold text-2xl text-primary">24hrs</span>
                     </div>
                     <p className="text-xs text-gray-500 font-semibold uppercase">Report Turnaround</p>
@@ -317,13 +316,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             
             <div className="relative z-10 max-w-xl text-center md:text-left">
-              <div className="inline-block px-3 py-1 bg-white/10 text-secondary rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
+              <div className="inline-block px-3 py-1 bg-white/10 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
                 24/7 AI Health Support
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                Chat with NeuroBot
+                Chat with AvishkarBot
               </h2>
-              <p className="text-blue-100 text-lg mb-8 leading-relaxed">
+              <p className="text-green-50 text-lg mb-8 leading-relaxed">
                 Unsure about test preparations? Need to understand a medical term? Our AI assistant is here to help you anytime, anywhere.
               </p>
               <button 
@@ -337,7 +336,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
              <div className="relative z-10 hidden lg:block">
                <div className="w-72 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 transform rotate-6 hover:rotate-0 transition-transform duration-500 shadow-xl">
                   <div className="flex gap-3 mb-4">
-                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold shadow-lg">NB</div>
+                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold shadow-lg">AB</div>
                      <div className="bg-white/20 rounded-xl rounded-tl-none p-3 text-sm text-white flex-1">
                         How do I prepare for a Lipid Profile?
                      </div>

@@ -1,4 +1,3 @@
-
 import { NavLink, QuickAction, HealthPackage, TestCategory, LabLocation, TestItem, HealthConcern, View } from '../types';
 
 export const navLinks: NavLink[] = [
@@ -106,50 +105,50 @@ export const healthConcerns: HealthConcern[] = [
 export const locations: LabLocation[] = [
   {
     id: 1,
-    name: 'NeuroDiag Main Hub',
-    address: '123 Medical District, Downtown, NY 10001',
-    phone: '+1 (555) 012-3456',
-    coordinates: { lat: 40.7128, lng: -74.0060 },
+    name: 'Avishkar Diagnostic - Bank More',
+    address: 'Bank More, Dhanbad, Jharkhand 826001',
+    phone: '+91 326 230 XXXX',
+    coordinates: { lat: 23.7957, lng: 86.4304 },
     availableServices: ['Radiology', 'Pathology', 'Cardiology', '24/7 Open', 'Home Collection']
   },
   {
     id: 2,
-    name: 'Westside Collection Center',
-    address: '456 West Avenue, Manhattan, NY 10011',
-    phone: '+1 (555) 012-7890',
-    coordinates: { lat: 40.7505, lng: -73.9934 },
+    name: 'Hirapur Collection Center',
+    address: 'Hirapur, Dhanbad, Jharkhand 826001',
+    phone: '+91 999 999 XXXX',
+    coordinates: { lat: 23.8054, lng: 86.4251 },
     availableServices: ['Pathology', 'Home Collection']
   },
   {
     id: 3,
-    name: 'Brooklyn Diagnostics',
-    address: '789 Kings Hwy, Brooklyn, NY 11223',
-    phone: '+1 (555) 012-4567',
-    coordinates: { lat: 40.6782, lng: -73.9442 },
+    name: 'Saraidhela Branch',
+    address: 'Steel Gate, Saraidhela, Dhanbad 828127',
+    phone: '+91 888 888 XXXX',
+    coordinates: { lat: 23.8168, lng: 86.4526 },
     availableServices: ['Radiology', 'Pathology', 'Cardiology']
   },
   {
     id: 4,
-    name: 'Queens Pathology Lab',
-    address: '321 Queens Blvd, Queens, NY 11101',
-    phone: '+1 (555) 012-1111',
-    coordinates: { lat: 40.7282, lng: -73.7949 },
+    name: 'Jharia City Lab',
+    address: 'Main Road, Jharia, Dhanbad 828111',
+    phone: '+91 777 777 XXXX',
+    coordinates: { lat: 23.7431, lng: 86.4150 },
     availableServices: ['Pathology', 'Biochemistry']
   },
   {
     id: 5,
-    name: 'North Shore Imaging',
-    address: '555 Northern Blvd, Great Neck, NY 11021',
-    phone: '+1 (555) 012-2222',
-    coordinates: { lat: 40.7770, lng: -73.7300 },
+    name: 'Govindpur Center',
+    address: 'GT Road, Govindpur, Dhanbad 828109',
+    phone: '+91 666 666 XXXX',
+    coordinates: { lat: 23.8422, lng: 86.5160 },
     availableServices: ['Radiology', 'MRI', 'CT Scan']
   },
   {
     id: 6,
-    name: 'Staten Island Health',
-    address: '999 Richmond Rd, Staten Island, NY 10304',
-    phone: '+1 (555) 012-3333',
-    coordinates: { lat: 40.5795, lng: -74.1502 },
+    name: 'Dhanbad City Center',
+    address: 'City Center, Dhanbad, Jharkhand 826001',
+    phone: '+91 555 555 XXXX',
+    coordinates: { lat: 23.7989, lng: 86.4323 },
     availableServices: ['Radiology', 'Pathology', '24/7 Open']
   }
 ];

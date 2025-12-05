@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { View } from '../types';
 import { navLinks, locations } from '../data/mockData';
@@ -46,27 +45,27 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
     <>
       <ReportModal isOpen={isReportModalOpen} onClose={() => setIsReportModalOpen(false)} />
 
-      {/* Top Bar - Premium Dark Teal/Navy */}
+      {/* Top Bar - Avishkar Green */}
       <div className="bg-primary text-white text-[11px] md:text-xs py-2.5 hidden md:block tracking-wide">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 hover:text-secondary transition-colors cursor-pointer group">
-              <Phone className="h-3.5 w-3.5 text-secondary group-hover:text-white transition-colors" />
-              <span className="font-semibold">24/7 Helpline: <span className="text-secondary group-hover:text-white">911-000</span></span>
+            <div className="flex items-center gap-2 hover:text-white/80 transition-colors cursor-pointer group">
+              <Phone className="h-3.5 w-3.5 text-white group-hover:text-white transition-colors" />
+              <span className="font-semibold">Helpline: <span className="text-white font-bold">0326-230-XXXX</span></span>
             </div>
             <div className="flex items-center gap-2 hidden lg:flex">
               <Clock className="h-3.5 w-3.5 opacity-70" />
-              <span className="opacity-80">Mon-Sun: 7:00 AM - 10:00 PM</span>
+              <span className="opacity-80">Mon-Sun: 7:00 AM - 9:00 PM</span>
             </div>
           </div>
           
           <div className="flex items-center gap-4">
-             <a href="#" className="opacity-80 hover:opacity-100 hover:text-secondary transition-colors">For Doctors</a>
+             <a href="#" className="opacity-80 hover:opacity-100 hover:text-white transition-colors">For Doctors</a>
              <span className="opacity-30">|</span>
-             <a href="#" className="opacity-80 hover:opacity-100 hover:text-secondary transition-colors">Corporate</a>
+             <a href="#" className="opacity-80 hover:opacity-100 hover:text-white transition-colors">Corporate</a>
              <span className="opacity-30">|</span>
-            <div className="flex items-center gap-1.5 cursor-pointer hover:text-secondary transition-colors">
-              <MapPin className="h-3.5 w-3.5 text-secondary" />
+            <div className="flex items-center gap-1.5 cursor-pointer hover:text-white transition-colors">
+              <MapPin className="h-3.5 w-3.5 text-white" />
               <select 
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
@@ -95,17 +94,17 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             
-            {/* Logo */}
+            {/* Logo - Avishkar Style */}
             <div 
               className="flex items-center gap-3 cursor-pointer group" 
               onClick={() => onNavigate(View.HOME)}
             >
-              <div className="bg-gradient-to-br from-primary to-blue-800 p-2.5 rounded-xl shadow-lg group-hover:shadow-blue-900/20 transition-all duration-300">
-                <Activity className="h-6 w-6 text-white" />
+              <div className="bg-white border-2 border-primary p-2 rounded-xl shadow-md group-hover:shadow-green-900/10 transition-all duration-300">
+                <Activity className="h-6 w-6 text-secondary" />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-heading font-bold text-primary leading-none tracking-tight">NeuroDiag</span>
-                <span className="text-[10px] text-teal font-bold tracking-[0.2em] uppercase mt-0.5">Excellence in Care</span>
+                <span className="text-2xl font-heading font-bold text-primary leading-none tracking-tight">Avishkar</span>
+                <span className="text-[10px] text-secondary font-bold tracking-[0.2em] uppercase mt-0.5">Diagnostic Centre</span>
               </div>
             </div>
 
@@ -117,7 +116,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
                   onClick={() => handleLinkClick(link.view)}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 relative ${
                     currentView === link.view
-                      ? 'text-primary bg-blue-50' 
+                      ? 'text-primary bg-green-50' 
                       : 'text-gray-500 hover:text-primary hover:bg-gray-50'
                   }`}
                 >
@@ -130,14 +129,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
             <div className="hidden md:flex items-center gap-4">
                <button 
                 onClick={() => setIsReportModalOpen(true)}
-                className="text-xs font-bold text-primary hover:text-white border-2 border-primary/10 hover:bg-primary hover:border-primary rounded-full px-5 py-2.5 transition-all duration-300"
+                className="text-xs font-bold text-primary hover:text-white border-2 border-primary hover:bg-primary rounded-full px-5 py-2.5 transition-all duration-300"
                >
                  Download Report
                </button>
 
               <button
                 onClick={() => onNavigate(View.APPOINTMENT)}
-                className="bg-secondary hover:bg-cyan-500 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2 hover:-translate-y-0.5"
+                className="bg-secondary hover:bg-red-600 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-red-500/20 flex items-center gap-2 hover:-translate-y-0.5"
               >
                 Book Appointment
               </button>
@@ -188,7 +187,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
                 key={link.name}
                 onClick={() => handleLinkClick(link.view)}
                 className={`w-full text-left px-4 py-4 rounded-xl text-base font-semibold transition-colors flex items-center justify-between group ${
-                    currentView === link.view ? 'bg-blue-50 text-primary' : 'text-gray-600 hover:bg-gray-50'
+                    currentView === link.view ? 'bg-green-50 text-primary' : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
                 {link.name}
@@ -215,7 +214,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
                 onNavigate(View.APPOINTMENT);
                 setIsMobileMenuOpen(false);
               }}
-              className="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-xl shadow-blue-900/10 active:scale-95 transition-transform"
+              className="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-xl shadow-green-900/10 active:scale-95 transition-transform"
             >
               Book Appointment
             </button>
