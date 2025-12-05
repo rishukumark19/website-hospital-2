@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { View } from '../types';
 import { popularPackages, quickActions } from '../data/mockData';
@@ -18,7 +19,8 @@ import {
   ChevronRight,
   Activity,
   ShieldCheck,
-  CheckCircle2
+  CheckCircle2,
+  Star
 } from 'lucide-react';
 
 interface HomeProps {
@@ -69,6 +71,20 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       rating: 5,
       text: "Best diagnostic center in Dhanbad. Their full body package covers everything at a very reasonable price.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200"
+    },
+    {
+      name: "Meera Reddy",
+      location: "Dhanbad City",
+      rating: 5,
+      text: "The staff is extremely polite and the facilities are world-class. I appreciate the online report download feature.",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+    },
+    {
+      name: "Arjun Kumar",
+      location: "Saraidhela",
+      rating: 5,
+      text: "Highly recommended for cardiac profiles. The doctor explained the reports clearly. Professional and trusted.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
     }
   ];
 
@@ -87,8 +103,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
       {/* 1. Hero Section */}
       <section className="relative bg-gradient-to-r from-green-50 via-white to-green-50 pt-12 pb-32 md:pt-24 md:pb-48 overflow-hidden">
-        
-        {/* Medical Pattern Background */}
         <div className="absolute inset-0 z-0 opacity-40" style={{
             backgroundImage: 'radial-gradient(#86efac 1.5px, transparent 1.5px)',
             backgroundSize: '24px 24px'
@@ -97,7 +111,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             
-            {/* Left Content */}
             <div className="flex-1 text-center lg:text-left pt-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-green-200 text-primary font-bold text-xs rounded-full mb-6 tracking-wide shadow-sm animate-fade-in">
                 <ShieldCheck className="h-4 w-4 text-secondary" />
@@ -109,27 +122,24 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
                 Advanced pathology and radiology services delivered with care at Bank More, Dhanbad. 
-                Experience faster turnaround times and 100% accurate reports from our world-class facilities.
+                Experience faster turnaround times and 100% accurate reports.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <button 
                   onClick={() => setIsBookingModalOpen(true)}
                   className="w-full sm:w-auto bg-primary hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-green-900/20 flex items-center justify-center gap-3 hover:-translate-y-1"
-                  aria-label="Book a home visit for sample collection"
                 >
                   <HomeIcon className="h-5 w-5" /> Book Home Visit
                 </button>
                 <button 
                   onClick={() => onNavigate(View.LOCATOR)}
                   className="w-full sm:w-auto bg-white hover:bg-gray-50 text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 hover:border-primary/30"
-                  aria-label="Find the nearest lab location"
                 >
                   <MapPin className="h-5 w-5 text-secondary" /> Find Our Lab
                 </button>
               </div>
 
-              {/* Trust Indicators */}
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-8 text-sm font-semibold text-gray-500">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-secondary"></div> Bank More, Dhanbad
@@ -143,25 +153,18 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Right Image Layer - Avishkar Style */}
             <div className="flex-1 relative w-full max-w-lg lg:max-w-none mt-10 lg:mt-0">
-              
-              {/* Abstract Blob */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-green-100 to-teal-light rounded-full blur-3xl opacity-60"></div>
               
-              {/* Main Image - Busy Modern Reception */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
                 <img 
                   src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000" 
-                  alt="Avishkar Diagnostic Centre Reception Bank More Dhanbad" 
+                  alt="Avishkar Diagnostic Centre Reception" 
                   className="w-full h-auto object-cover"
                 />
-                
-                {/* Gradient Overlay for Text Visibility if needed, kept subtle */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-60"></div>
               </div>
 
-              {/* Floating Card 1 - Technology */}
               <div className="absolute -left-6 top-20 bg-white p-4 rounded-xl shadow-xl border border-gray-50 flex items-center gap-3 animate-bounce-slow hidden sm:flex max-w-[200px]">
                 <div className="bg-green-100 p-2.5 rounded-lg text-primary">
                   <Microscope className="h-6 w-6" />
@@ -172,7 +175,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Floating Card 2 - Accreditation */}
               <div className="absolute -right-4 bottom-10 bg-white p-4 rounded-xl shadow-xl border border-gray-50 flex items-center gap-3 animate-bounce-delayed hidden sm:flex">
                 <div className="bg-red-100 p-2.5 rounded-lg text-secondary">
                   <Award className="h-6 w-6" />
@@ -188,7 +190,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 2. Quick Actions Bar (Floating) */}
+      {/* 2. Quick Actions Bar */}
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-20 -mt-24 md:-mt-28">
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8 backdrop-blur-xl bg-white/95">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
@@ -199,9 +201,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   key={index} 
                   onClick={() => handleQuickAction(action.link)}
                   className="group flex items-center gap-4 p-4 cursor-pointer hover:bg-green-50 rounded-xl transition-colors"
-                  role="button"
-                  tabIndex={0}
-                  aria-label={action.title}
                 >
                   <div className="w-14 h-14 bg-green-50 group-hover:bg-primary group-hover:text-white text-primary rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0">
                     <Icon className="h-7 w-7" />
@@ -220,7 +219,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* NEW: Health Concerns Grid Section */}
       <HealthConcerns onNavigate={onNavigate} />
 
       {/* 3. Popular Packages */}
@@ -254,17 +252,25 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* NEW: Testimonials Section (Feature 1) */}
+      {/* 4. Testimonials (Enhanced) */}
       <section className="py-20 bg-soft-blue">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
+             <div className="inline-block px-3 py-1 bg-green-100 text-primary rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                 Testimonials
+             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Patient Success Stories</h2>
             <p className="text-gray-600 text-lg">
-              Don't just take our word for it. Here is what our patients from Dhanbad have to say about their experience with Avishkar.
+              Don't just take our word for it. Here is what our patients from Dhanbad have to say.
             </p>
+            <div className="flex items-center justify-center gap-2 mt-4 text-sm font-bold text-gray-500">
+               <span className="flex items-center gap-1"><Star className="h-4 w-4 text-yellow-400 fill-yellow-400" /> 4.9/5 Rating</span>
+               <span>•</span>
+               <span>2000+ Google Reviews</span>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <TestimonialCard key={i} {...t} />
             ))}
@@ -272,22 +278,20 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 4. Why Choose Us (Stats) - IMPROVED WITH DOCTOR IMAGE */}
+      {/* 5. Why Choose Us */}
       <section className="py-20 bg-green-50 relative overflow-hidden">
-        {/* Background Decoration */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
-            {/* Text Content */}
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Why Choose <span className="text-secondary">Avishkar?</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                We combine technological excellence with a human touch right here in Dhanbad. Our rigorous quality control ensures that every report is accurate, giving you the clarity you need for your health journey.
+                We combine technological excellence with a human touch right here in Dhanbad. Our rigorous quality control ensures that every report is accurate.
               </p>
               
               <ul className="space-y-5 mb-10">
@@ -307,33 +311,28 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </ul>
 
               <button 
-                onClick={() => onNavigate(View.SERVICES)}
+                onClick={() => onNavigate(View.ABOUT)}
                 className="bg-primary hover:bg-green-700 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-green-900/10 hover:shadow-green-900/20"
               >
                 Learn More About Us
               </button>
             </div>
 
-            {/* Doctor Image & Stats - Right Side */}
             <div className="order-1 lg:order-2 relative">
-                
-                {/* Main Image Container - Indian Doctor */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-w-md mx-auto bg-gray-200">
                     <img 
                         src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000" 
                         alt="Dr. Rajesh Kumar at Avishkar Diagnostic Dhanbad" 
                         className="w-full h-full object-cover"
+                        loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
-                    
-                    {/* Bottom Text in Image */}
                     <div className="absolute bottom-6 left-6 right-6 text-white">
                         <p className="font-bold text-lg">Dr. Rajesh Kumar</p>
                         <p className="text-sm opacity-90">Senior Pathologist, Avishkar Diagnostic</p>
                     </div>
                 </div>
 
-                {/* Floating Stat 1 - Top Left */}
                 <div className="absolute top-10 -left-4 md:-left-12 bg-white p-4 rounded-xl shadow-lg border-l-4 border-secondary max-w-[160px] animate-bounce-slow">
                     <div className="flex items-center gap-3 mb-1">
                         <Users className="h-5 w-5 text-secondary" />
@@ -342,7 +341,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <p className="text-xs text-gray-500 font-semibold uppercase">Happy Patients</p>
                 </div>
 
-                {/* Floating Stat 2 - Bottom Right */}
                 <div className="absolute bottom-20 -right-4 md:-right-8 bg-white p-4 rounded-xl shadow-lg border-l-4 border-primary max-w-[180px] animate-bounce-delayed">
                     <div className="flex items-center gap-3 mb-1">
                         <Activity className="h-5 w-5 text-primary" />
@@ -350,7 +348,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     </div>
                     <p className="text-xs text-gray-500 font-semibold uppercase">Report Turnaround</p>
                 </div>
-
             </div>
 
           </div>
@@ -362,7 +359,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="bg-primary rounded-3xl p-8 md:p-16 relative flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden shadow-2xl">
             
-            {/* Background Glow */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             
             <div className="relative z-10 max-w-xl text-center md:text-left">

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Layout from './components/Layout';
 import Home from './views/Home';
@@ -11,6 +12,11 @@ import FAQ from './views/FAQ';
 import Blog from './views/Blog';
 import PrivacyPolicy from './views/PrivacyPolicy';
 import TermsOfService from './views/TermsOfService';
+import ServiceDetailCT from './views/ServiceDetailCT';
+import ServiceDetailMRI from './views/ServiceDetailMRI';
+import ServiceDetailFullBody from './views/ServiceDetailFullBody';
+import ServiceDetailDiabetes from './views/ServiceDetailDiabetes';
+import ServiceDetailCardiac from './views/ServiceDetailCardiac';
 import { View } from './types';
 
 const App: React.FC = () => {
@@ -33,8 +39,6 @@ const App: React.FC = () => {
       case View.LOCATOR:
         return <Locator />;
       case View.CONTACT:
-        // Contact details are in footer, but we can route to home or locator
-        // We'll treat it as home + scroll to footer action usually, or just show home
         return <Home onNavigate={setCurrentView} />;
       case View.ABOUT:
          return <AboutUs onNavigate={setCurrentView} />;
@@ -46,6 +50,16 @@ const App: React.FC = () => {
          return <PrivacyPolicy />;
       case View.TERMS:
          return <TermsOfService />;
+      case View.SERVICEDETAIL_CT:
+         return <ServiceDetailCT onNavigate={setCurrentView} />;
+      case View.SERVICEDETAIL_MRI:
+         return <ServiceDetailMRI onNavigate={setCurrentView} />;
+      case View.SERVICEDETAIL_FULL_BODY:
+         return <ServiceDetailFullBody onNavigate={setCurrentView} />;
+      case View.SERVICEDETAIL_DIABETES:
+         return <ServiceDetailDiabetes onNavigate={setCurrentView} />;
+      case View.SERVICEDETAIL_CARDIAC:
+         return <ServiceDetailCardiac onNavigate={setCurrentView} />;
       default:
         return <Home onNavigate={setCurrentView} />;
     }

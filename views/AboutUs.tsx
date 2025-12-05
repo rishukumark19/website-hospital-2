@@ -1,15 +1,16 @@
+
 import React from 'react';
 import { View } from '../types';
 import { 
   Award, 
   ShieldCheck, 
-  Users, 
   Target, 
   CheckCircle, 
   Globe, 
   Microscope,
   Quote,
-  Stethoscope
+  Stethoscope,
+  GraduationCap
 } from 'lucide-react';
 
 interface AboutUsProps {
@@ -82,7 +83,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 2.5 Feature Image Break (NEW) */}
+      {/* 2.5 Feature Image Break */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto max-w-4xl px-4 text-center">
              <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white">
@@ -101,7 +102,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 3. Accreditations & Quality (PREMIUM CREDIBILITY) */}
+      {/* 3. Accreditations */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -112,7 +113,6 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* NABL */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-1 transition-transform">
                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                  <Award className="h-8 w-8" />
@@ -126,7 +126,6 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                </div>
             </div>
 
-            {/* CAP */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-1 transition-transform">
                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                  <ShieldCheck className="h-8 w-8" />
@@ -140,7 +139,6 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                </div>
             </div>
 
-            {/* ISO */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-1 transition-transform">
                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                  <Microscope className="h-8 w-8" />
@@ -157,42 +155,67 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 4. Leadership / Doctors (Feature 3) */}
+      {/* 4. Leadership / Doctors (Enhanced) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-4">Medical Leadership</h2>
-                <p className="text-gray-600 max-w-xl">
-                  Led by renowned pathologists and radiologists dedicated to clinical excellence.
-                </p>
-              </div>
-              <button className="hidden md:block text-secondary font-bold hover:underline">
-                View All Doctors
-              </button>
+           <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-primary mb-4">Meet Our Experts</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Led by renowned pathologists and radiologists dedicated to clinical excellence and compassionate care.
+              </p>
            </div>
 
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: 'Dr. Sarah Johnson', role: 'Chief Pathologist', qual: 'MBBS, MD (Pathology)', exp: '15 Years Exp.', img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800' },
-                { name: 'Dr. Robert Chen', role: 'Head of Radiology', qual: 'MBBS, MD (Radio-Diagnosis)', exp: '12 Years Exp.', img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800' },
-                { name: 'Dr. Emily Davis', role: 'Clinical Biochemist', qual: 'Ph.D. Biochemistry', exp: '8 Years Exp.', img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800' },
-                { name: 'Dr. Michael Wilson', role: 'Microbiologist', qual: 'M.Sc Medical Microbiology', exp: '10 Years Exp.', img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800' },
+                { 
+                    name: 'Dr. Rajesh Kumar', 
+                    role: 'Chief Pathologist', 
+                    qual: 'MBBS, MD (Pathology), AIIMS', 
+                    exp: '20+ Years Experience',
+                    bio: 'Expert in Histopathology and Cytopathology. Dedicated to bringing advanced diagnostics to Dhanbad.',
+                    img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800' 
+                },
+                { 
+                    name: 'Dr. Priya Singh', 
+                    role: 'Head of Radiology', 
+                    qual: 'MBBS, MD (Radio-Diagnosis)', 
+                    exp: '15+ Years Experience', 
+                    bio: 'Specializes in MRI and CT imaging with a focus on neuro-radiology and women\'s imaging.',
+                    img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800' 
+                },
+                { 
+                    name: 'Dr. Amit Verma', 
+                    role: 'Senior Biochemist', 
+                    qual: 'Ph.D. Biochemistry', 
+                    exp: '12+ Years Experience', 
+                    bio: 'Leads the quality control division ensuring 6-sigma standards in all biochemical assays.',
+                    img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=800' 
+                },
+                { 
+                    name: 'Dr. Neha Gupta', 
+                    role: 'Microbiologist', 
+                    qual: 'M.Sc Medical Microbiology', 
+                    exp: '10+ Years Experience', 
+                    bio: 'Passionate about infectious disease diagnostics and antibiotic stewardship.',
+                    img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800' 
+                },
               ].map((doc, idx) => (
-                <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="relative overflow-hidden h-64">
-                    <img src={doc.img} alt={doc.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold text-primary shadow-sm flex items-center gap-1">
-                      <Award className="h-3 w-3 text-secondary" /> Certified
-                    </div>
+                <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col">
+                  <div className="relative overflow-hidden h-64 bg-gray-100">
+                    <img src={doc.img} alt={doc.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-lg font-bold text-primary mb-1">{doc.name}</h3>
-                    <p className="text-secondary font-medium text-xs uppercase tracking-wide mb-3">{doc.role}</p>
-                    <div className="space-y-1 text-sm text-gray-600">
-                       <p className="flex items-center gap-2"><Stethoscope className="h-3 w-3" /> {doc.qual}</p>
-                       <p className="flex items-center gap-2"><Award className="h-3 w-3" /> {doc.exp}</p>
+                    <p className="text-secondary font-bold text-xs uppercase tracking-wide mb-3">{doc.role}</p>
+                    
+                    <div className="space-y-2 mb-4">
+                       <p className="flex items-center gap-2 text-sm text-gray-700 font-medium"><GraduationCap className="h-4 w-4 text-green-600" /> {doc.qual}</p>
+                       <p className="flex items-center gap-2 text-sm text-gray-700 font-medium"><Award className="h-4 w-4 text-green-600" /> {doc.exp}</p>
                     </div>
+
+                    <p className="text-xs text-gray-500 leading-relaxed mt-auto border-t border-gray-100 pt-3">
+                        {doc.bio}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -200,7 +223,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 5. Patient Stories (NEW) */}
+      {/* 5. Patient Stories */}
       <section className="py-20 bg-green-50">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-primary text-center mb-12">Trusted by 10 Lakh+ Patients</h2>
@@ -211,7 +234,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                     { name: 'Sneha Gupta', text: 'AvishkarBot helped me understand my test prep easily. Great technology!', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100' }
                 ].map((testimonial, idx) => (
                     <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-green-100 max-w-sm flex items-start gap-4">
-                         <img src={testimonial.img} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md" />
+                         <img src={testimonial.img} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md" loading="lazy" />
                          <div>
                              <Quote className="h-4 w-4 text-secondary mb-1 opacity-50" />
                              <p className="text-sm text-gray-600 italic mb-2">"{testimonial.text}"</p>
