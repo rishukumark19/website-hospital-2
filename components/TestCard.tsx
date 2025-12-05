@@ -29,7 +29,7 @@ const TestCard: React.FC<TestCardProps> = ({ test, onBook }) => {
           <Icon className="h-6 w-6" />
         </div>
         <span className="bg-gray-50 text-gray-700 font-bold text-sm px-3 py-1 rounded-lg">
-          ${test.price}
+          ₹{test.price}
         </span>
       </div>
       

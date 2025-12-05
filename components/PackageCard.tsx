@@ -56,11 +56,11 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, onBook }) => {
       <div className="border-t border-gray-100 pt-6">
         <div className="flex justify-between items-end mb-4">
           <div>
-             <p className="text-xs text-gray-400 font-medium line-through mb-1">${pkg.price}</p>
-             <p className="text-2xl font-bold text-primary">${pkg.discountedPrice}</p>
+             <p className="text-xs text-gray-400 font-medium line-through mb-1">₹{pkg.price}</p>
+             <p className="text-2xl font-bold text-primary">₹{pkg.discountedPrice}</p>
           </div>
           <span className="text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded">
-            Save ${pkg.price - pkg.discountedPrice}
+            Save ₹{pkg.price - pkg.discountedPrice}
           </span>
         </div>
         

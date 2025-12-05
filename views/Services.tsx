@@ -8,25 +8,25 @@ import { Search, Stethoscope, Microscope, Zap, Filter, LayoutGrid, List } from '
 
 // Data for Core Services
 const coreServicesData: ServiceItem[] = [
-  { id: 'c1', title: 'Pathology & Laboratory Medicine', description: 'Comprehensive diagnostic testing for precise disease management.', price: 50, category: 'Pathology', iconName: 'Microscope' },
-  { id: 'c2', title: 'Genetics & Genomics', description: 'Advanced molecular diagnostics for genetic conditions.', price: 300, category: 'Pathology', iconName: 'Dna' },
-  { id: 'c3', title: 'Biochemistry', description: 'Analysis of chemical processes within and related to living organisms.', price: 40, category: 'Pathology', iconName: 'FlaskConical' },
-  { id: 'c4', title: 'Microbiology', description: 'Study of microscopic organisms, such as bacteria, viruses, archaea, fungi and protozoa.', price: 45, category: 'Pathology', iconName: 'Bug' },
-  { id: 'c5', title: 'Hematology', description: 'Diagnosis and treatment of blood diseases and disorders.', price: 35, category: 'Pathology', iconName: 'Droplet' },
-  { id: 'c6', title: 'Histopathology', description: 'Microscopic examination of tissue in order to study the manifestations of disease.', price: 100, category: 'Pathology', iconName: 'Slice' },
-  { id: 'c7', title: 'Newborn Screening', description: 'Screening for harmful or potentially fatal disorders that aren\'t otherwise apparent at birth.', price: 80, category: 'Pathology', iconName: 'Baby' },
-  { id: 'c8', title: 'Metabolomics & Proteomics', description: 'Large-scale study of small molecules and proteins.', price: 400, category: 'Pathology', iconName: 'Activity' },
+  { id: 'c1', title: 'Pathology & Laboratory Medicine', description: 'Comprehensive diagnostic testing for precise disease management.', price: 500, category: 'Pathology', iconName: 'Microscope' },
+  { id: 'c2', title: 'Genetics & Genomics', description: 'Advanced molecular diagnostics for genetic conditions.', price: 5000, category: 'Pathology', iconName: 'Dna' },
+  { id: 'c3', title: 'Biochemistry', description: 'Analysis of chemical processes within and related to living organisms.', price: 800, category: 'Pathology', iconName: 'FlaskConical' },
+  { id: 'c4', title: 'Microbiology', description: 'Study of microscopic organisms, such as bacteria, viruses, archaea, fungi and protozoa.', price: 1000, category: 'Pathology', iconName: 'Bug' },
+  { id: 'c5', title: 'Hematology', description: 'Diagnosis and treatment of blood diseases and disorders.', price: 600, category: 'Pathology', iconName: 'Droplet' },
+  { id: 'c6', title: 'Histopathology', description: 'Microscopic examination of tissue in order to study the manifestations of disease.', price: 2000, category: 'Pathology', iconName: 'Slice' },
+  { id: 'c7', title: 'Newborn Screening', description: 'Screening for harmful or potentially fatal disorders that aren\'t otherwise apparent at birth.', price: 1500, category: 'Pathology', iconName: 'Baby' },
+  { id: 'c8', title: 'Metabolomics & Proteomics', description: 'Large-scale study of small molecules and proteins.', price: 8000, category: 'Pathology', iconName: 'Activity' },
 ];
 
 // Data for Imaging & Radiology
 const imagingServicesData: ServiceItem[] = [
-  { id: 'i1', title: 'High-Definition MRI', description: 'Detailed imaging of organs and structures within the body.', price: 250, category: 'Radiology', iconName: 'Brain' },
-  { id: 'i2', title: 'CT Scan', description: 'Detailed cross-sectional images of the body.', price: 180, category: 'Radiology', iconName: 'Scan' },
-  { id: 'i3', title: 'Digital X-Ray', description: 'Quick and painless imaging of bone structures.', price: 50, category: 'Radiology', iconName: 'Bone' },
-  { id: 'i4', title: 'Digital Mammography', description: 'Specialized medical imaging that uses a low-dose x-ray system to see inside the breasts.', price: 120, category: 'Radiology', iconName: 'Scan' },
-  { id: 'i5', title: 'Ultrasound / Sonography', description: 'Using high-frequency sound waves to capture live images from the inside of your body.', price: 90, category: 'Radiology', iconName: 'Activity' },
-  { id: 'i6', title: 'Cardiology Diagnostics', description: 'Includes ECG, Echo, and TMT for comprehensive heart health.', price: 150, category: 'Cardiology', iconName: 'HeartPulse' },
-  { id: 'i7', title: 'Wellness Services', description: 'Holistic wellness checks and consultations.', price: 60, category: 'Checkup', iconName: 'Sun' },
+  { id: 'i1', title: 'High-Definition MRI', description: 'Detailed imaging of organs and structures within the body.', price: 7500, category: 'Radiology', iconName: 'Brain' },
+  { id: 'i2', title: 'CT Scan', description: 'Detailed cross-sectional images of the body.', price: 5000, category: 'Radiology', iconName: 'Scan' },
+  { id: 'i3', title: 'Digital X-Ray', description: 'Quick and painless imaging of bone structures.', price: 800, category: 'Radiology', iconName: 'Bone' },
+  { id: 'i4', title: 'Digital Mammography', description: 'Specialized medical imaging that uses a low-dose x-ray system to see inside the breasts.', price: 2500, category: 'Radiology', iconName: 'Scan' },
+  { id: 'i5', title: 'Ultrasound / Sonography', description: 'Using high-frequency sound waves to capture live images from the inside of your body.', price: 1800, category: 'Radiology', iconName: 'Activity' },
+  { id: 'i6', title: 'Cardiology Diagnostics', description: 'Includes ECG, Echo, and TMT for comprehensive heart health.', price: 3000, category: 'Cardiology', iconName: 'HeartPulse' },
+  { id: 'i7', title: 'Wellness Services', description: 'Holistic wellness checks and consultations.', price: 1500, category: 'Checkup', iconName: 'Sun' },
 ];
 
 const Services: React.FC = () => {

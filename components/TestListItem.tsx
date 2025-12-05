@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TestItem } from '../types';
 import { Clock, AlertCircle, ChevronRight, TestTube } from 'lucide-react';
@@ -43,7 +42,7 @@ const TestListItem: React.FC<TestListItemProps> = ({ test, onBook }) => {
       {/* Right: Price & Action */}
       <div className="flex items-center justify-between w-full sm:w-auto gap-6 ml-auto sm:ml-0">
         <div className="text-right">
-            <p className="font-bold text-lg text-primary">${test.price}</p>
+            <p className="font-bold text-lg text-primary">₹{test.price}</p>
         </div>
         <button 
             onClick={() => onBook?.(test.id)}
