@@ -83,115 +83,91 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       />
 
       {/* 
-        HERO SECTION - NEUBERG STYLE CLEAN & ELEGANT
-        Minimalist, Image First, Subtle Buttons
+        HERO SECTION - REFERENCE IMAGE STYLE
+        Structure:
+        - Purple/Gradient Background
+        - Image on Left (Doctor/Person)
+        - Action Strip (Location | Search | Upload Rx) floating in center/right
       */}
-      <section className="relative bg-white pb-8 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-purple-50 via-white to-green-50 overflow-visible pt-8 pb-16 md:pb-24 lg:pb-32">
         
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            
-            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 pt-4">
-                
-                {/* 1. Doctor Image - Order 1 on Mobile (Top), Order 1 on Desktop (Left) */}
-                <div className="w-full lg:w-5/12 order-1 relative">
-                     {/* Mobile Image Container - Full Width & Clean */}
-                     <div className="block lg:hidden w-full h-[280px] rounded-2xl overflow-hidden bg-gray-50 mb-6 relative shadow-sm">
-                        <img 
-                            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800&h=800" 
-                            alt="Avishkar Doctor" 
-                            className="w-full h-full object-cover object-top"
-                        />
-                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                            <p className="text-white font-medium text-sm">Dr. Rajesh Kumar</p>
-                            <p className="text-white/80 text-xs">Chief Pathologist</p>
-                        </div>
-                     </div>
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+             <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob"></div>
+             <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-200/20 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob animation-delay-2000"></div>
+        </div>
 
-                     {/* Desktop Image - Clean & Professional */}
-                     <div className="hidden lg:block relative z-10 mx-auto">
-                        <img 
-                            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800" 
-                            alt="Professional Doctor" 
-                            className="relative z-10 w-full max-w-md mx-auto h-auto object-contain rounded-2xl" 
-                        />
-                     </div>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div className="flex flex-col lg:flex-row items-center">
+                
+                {/* 1. Doctor Image - Positioned Left */}
+                <div className="w-full lg:w-5/12 relative flex justify-center lg:justify-start">
+                     {/* Desktop Image - Standing Tall */}
+                     <img 
+                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600" 
+                        alt="Avishkar Doctor" 
+                        className="relative z-10 max-h-[350px] md:max-h-[450px] object-contain drop-shadow-2xl filter brightness-105" 
+                        loading="eager"
+                     />
+                     {/* Circle BG behind doctor */}
+                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-t from-primary/10 to-transparent rounded-full -z-10"></div>
                 </div>
 
-                {/* 2. Content Zone - Order 2 on Mobile, Order 2 on Desktop */}
-                <div className="w-full lg:w-7/12 order-2 flex flex-col">
+                {/* 2. Content & Action Strip */}
+                <div className="w-full lg:w-7/12 mt-8 lg:mt-0 lg:pl-10">
                     
-                    {/* Top Bar: Location & Trust (Desktop) */}
-                    <div className="hidden lg:flex items-center gap-4 mb-6">
-                        <div className="inline-flex items-center gap-2 bg-gray-50 rounded-full px-4 py-1.5 border border-gray-100 text-sm font-medium text-gray-700">
-                             <MapPin className="h-4 w-4 text-primary" /> Bank More, Dhanbad
+                    {/* Headline - Clean & Professional */}
+                    <div className="text-center lg:text-left mb-8 md:mb-12">
+                        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary mb-4 border border-green-100 shadow-sm">
+                            <ShieldCheck className="h-3.5 w-3.5" /> Trusted by 10 Lakh+ Patients
                         </div>
-                        <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-1.5 text-sm font-medium text-primary">
-                             <ShieldCheck className="h-4 w-4" /> 13+ Years of Trust
-                        </div>
-                    </div>
-
-                    {/* Headline */}
-                    <div className="mb-6 text-center lg:text-left">
-                        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
-                            Avishkar <span className="text-primary">Diagnostic</span>
+                        <h1 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-2">
+                           Precision Diagnostics<br/>
+                           <span className="text-primary">You Can Trust</span>
                         </h1>
-                        <p className="text-base md:text-lg text-gray-500 font-medium">
-                            Accurate Reports. Advanced Technology. Affordable Care.
-                        </p>
+                        <p className="text-gray-500 text-lg">NABL Accredited Lab • 24/7 Service • Home Collection</p>
                     </div>
 
-                    {/* Mobile Location Pill - Subtle */}
-                    <div className="lg:hidden flex justify-center mb-6">
-                         <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full pl-3 pr-4 py-1.5 shadow-sm">
-                            <MapPin className="h-3.5 w-3.5 text-primary" />
-                            <span className="text-xs font-semibold text-gray-700">Bank More, Dhanbad</span>
+                    {/* 
+                       THE ACTION STRIP - Like Reference Image 
+                       [ Location (Orange) ] [ Search (White) ] [ Upload Rx (Beige) ]
+                    */}
+                    <div className="bg-white rounded-3xl shadow-xl flex flex-col md:flex-row items-stretch overflow-hidden border border-gray-100 max-w-3xl mx-auto lg:mx-0">
+                        
+                        {/* Segment 1: Location - Orange/Accent */}
+                        <div className="bg-[#F39C12] text-white px-6 py-4 flex items-center gap-3 md:border-r border-white/20 cursor-pointer hover:bg-[#E67E22] transition-colors md:w-[240px] flex-shrink-0">
+                            <MapPin className="h-5 w-5" />
+                            <div className="flex flex-col">
+                                <span className="text-[10px] uppercase font-bold opacity-90 tracking-wider">Location</span>
+                                <div className="flex items-center gap-1 font-bold text-sm">
+                                    Bank More <ChevronDown className="h-3 w-3" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Search Bar - Clean & Simple */}
-                    <div className="w-full bg-white rounded-xl border border-gray-200 mb-8 flex items-center gap-3 px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-primary/20 focus-within:border-primary transition-all">
-                        <Search className="h-5 w-5 text-gray-400 flex-shrink-0" />
-                        <input 
-                            type="text" 
-                            value={heroSearch}
-                            onChange={(e) => setHeroSearch(e.target.value)}
-                            placeholder="Search for tests & packages..." 
-                            className="flex-grow bg-transparent border-none focus:ring-0 text-gray-700 text-sm md:text-base placeholder-gray-400 py-2"
-                        />
-                         <button 
-                            onClick={() => onNavigate(View.TEST_DIRECTORY)}
-                            className="bg-primary hover:bg-green-700 text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-colors hidden md:block"
-                        >
-                            Search
-                        </button>
-                    </div>
+                        {/* Segment 2: Search - White */}
+                        <div className="flex-grow bg-white px-6 py-4 flex items-center gap-3">
+                            <Search className="h-5 w-5 text-gray-400" />
+                            <input 
+                                type="text"
+                                value={heroSearch}
+                                onChange={(e) => setHeroSearch(e.target.value)}
+                                placeholder="Search for Tests & Packages..."
+                                className="w-full bg-transparent border-none outline-none text-gray-700 placeholder-gray-400 font-medium"
+                            />
+                        </div>
 
-                    {/* Action Buttons - ELEGANT OUTLINE STYLE */}
-                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-8 w-full sm:w-auto">
+                        {/* Segment 3: Upload Rx Button - Right Side - Beige/Light */}
                         <button 
-                            onClick={() => onNavigate(View.APPOINTMENT)}
-                            className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-green-50 bg-white px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all"
+                             onClick={() => setIsReportModalOpen(true)}
+                             className="bg-[#FEF3C7] text-[#92400E] hover:bg-[#FDE68A] px-6 py-4 flex items-center justify-center gap-3 font-bold transition-colors md:w-auto"
                         >
-                            <Calendar className="h-4 w-4" /> 
-                            <span>Book Appointment</span>
+                            <div className="bg-white/50 p-1.5 rounded-lg">
+                                <FileText className="h-5 w-5" />
+                            </div>
+                            <span>Upload Prescription</span>
                         </button>
-                        <button 
-                            onClick={() => onNavigate(View.HOME_COLLECTION)}
-                            className="w-full sm:w-auto border-2 border-secondary text-secondary hover:bg-red-50 bg-white px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all"
-                        >
-                            <HomeIcon className="h-4 w-4" /> 
-                            <span>Home Collection</span>
-                        </button>
-                    </div>
-
-                    {/* Secondary Text Links - Minimal */}
-                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-6 text-sm text-gray-500">
-                         <button onClick={() => setIsReportModalOpen(true)} className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                             <FileText className="h-4 w-4" /> <span>Download Report</span>
-                         </button>
-                         <button className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                             <Upload className="h-4 w-4" /> <span>Upload Prescription</span>
-                         </button>
                     </div>
 
                 </div>
@@ -201,7 +177,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       {/* Stats Section - Clean Strip */}
-      <div className="bg-white border-t border-b border-gray-100">
+      <div className="bg-white border-t border-b border-gray-100 relative z-20 shadow-sm">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-3 divide-x divide-gray-100 py-4">
                 <div className="text-center px-2">
@@ -217,34 +193,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <p className="text-[10px] md:text-xs text-gray-500 font-medium uppercase tracking-wide">Tests</p>
                 </div>
             </div>
-        </div>
-      </div>
-
-      {/* Quick Actions Bar - Clean Minimal Style */}
-      <div className="bg-gray-50 py-4 md:py-8 border-b border-gray-100">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {quickActions.map((action, index) => {
-              const Icon = iconMap[action.iconName] || FileText;
-              return (
-                <div 
-                  key={index} 
-                  onClick={() => handleQuickAction(action.link)}
-                  className="group flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm border border-gray-200 cursor-pointer hover:border-primary hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-green-50 group-hover:bg-primary group-hover:text-white text-primary rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-gray-800 group-hover:text-primary transition-colors">{action.title}</h3>
-                    <div className="flex items-center text-xs text-gray-500 font-medium mt-0.5">
-                      <span>Tap to proceed</span> <ChevronRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
 
@@ -377,51 +325,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     </div>
                     <p className="text-xs text-gray-500 font-semibold uppercase">Report Turnaround</p>
                 </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* AI Promo Section */}
-      <section className="py-20 bg-background overflow-hidden">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary rounded-3xl p-8 md:p-16 relative flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden shadow-2xl">
-            
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-            
-            <div className="relative z-10 max-w-xl text-center md:text-left">
-              <div className="inline-block px-3 py-1 bg-white/10 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
-                24/7 AI Health Support
-              </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                Chat with AvishkarBot
-              </h2>
-              <p className="text-green-50 text-lg mb-8 leading-relaxed">
-                Unsure about test preparations? Need to understand a medical term? Our AI assistant is here to help you anytime, anywhere.
-              </p>
-              <button 
-                onClick={() => onNavigate(View.ASSISTANT)}
-                className="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-lg flex items-center gap-2 mx-auto md:mx-0"
-              >
-                <Activity className="h-5 w-5" /> Start Chatting
-              </button>
-            </div>
-            
-             <div className="relative z-10 hidden lg:block">
-               <div className="w-72 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 transform rotate-6 hover:rotate-0 transition-transform duration-500 shadow-xl">
-                  <div className="flex gap-3 mb-4">
-                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold shadow-lg">AB</div>
-                     <div className="bg-white/20 rounded-xl rounded-tl-none p-3 text-sm text-white flex-1">
-                        How do I prepare for a Lipid Profile?
-                     </div>
-                  </div>
-                  <div className="flex gap-3 justify-end">
-                     <div className="bg-white rounded-xl rounded-tr-none p-3 text-sm text-primary shadow-sm flex-1">
-                        Fasting of 10-12 hours is required. Water is allowed.
-                     </div>
-                  </div>
-               </div>
             </div>
 
           </div>
