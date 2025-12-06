@@ -39,7 +39,7 @@ const App: React.FC = () => {
     setCurrentView(View.HOME);
   };
 
-  const renderView = () => {
+  const renderView = (): React.ReactNode => {
     switch (currentView) {
       case View.HOME:
         return <Home onNavigate={setCurrentView} />;
@@ -88,6 +88,7 @@ const App: React.FC = () => {
       case View.DASHBOARD:
          return isLoggedIn ? <Dashboard onNavigate={setCurrentView} onLogout={handleLogout} /> : <Login onLogin={handleLogin} onNavigate={setCurrentView} />;
       default:
+        // Default catch-all route to ensure content is always visible
         return <Home onNavigate={setCurrentView} />;
     }
   };

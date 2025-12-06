@@ -1,8 +1,5 @@
-import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 
-// Initialize Gemini
-// Note: In a real production app, ensure API keys are handled securely (e.g., via backend proxy).
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+import { GoogleGenAI, Chat } from "@google/genai";
 
 const SYSTEM_INSTRUCTION = `
 You are "NeuroBot", a helpful, professional, and empathetic virtual assistant for "NeuroDiag Centre".
@@ -18,7 +15,15 @@ IMPORTANT RESTRICTIONS:
 - Keep responses concise, warm, and professional.
 `;
 
+// Helper to get AI instance lazily
+const getAI = () => {
+  // Ensure we only access the environment variable when the function is called,
+  // preventing crashes during module initialization if process is undefined.
+  return new GoogleGenAI({ apiKey: process.env.API_KEY });
+};
+
 export const createChatSession = (): Chat => {
+  const ai = getAI();
   return ai.chats.create({
     model: 'gemini-2.5-flash',
     config: {
